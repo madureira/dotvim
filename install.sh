@@ -1,2 +1,2 @@
-ln -s ~/dotVim ~/.vim
-echo "source ~/.vim/vimrc" >> .vimrc
+ln -s ~/dotvim ~/.vim
+ln -s ~/dotvim/vimrc ~/.vimrc
