@@ -1,3 +1,11 @@
 call pathogen#infect()
+
+" enable syntax highlighting
 syntax on
-filetype plugin indent on
+
+" enable file type detection
+filetype plugin on
+
+" enable file type detection
+filetype indent on
+
