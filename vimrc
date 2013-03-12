@@ -25,3 +25,6 @@ set noexpandtab
 set number
 
 set list listchars=tab:▸\ ,trail:·,eol:¬,extends:❯,precedes:❮
+
+" enable the same appearance as line number column to gitgutter
+highlight clear SignColumn
