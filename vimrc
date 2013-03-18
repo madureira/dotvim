@@ -14,17 +14,23 @@ filetype indent on
 " enable mouse selection
 set mouse=a
 
-set tabstop=4
-
-" set softtabstop=4
-
-" set shiftwidth=4
-
-set noexpandtab
-
+" line number
 set number
 
 set list listchars=tab:▸\ ,trail:·,eol:¬,extends:❯,precedes:❮
 
+set showbreak=↪
+
 " enable the same appearance as line number column to gitgutter
 highlight clear SignColumn
+
+
+" Tabs, spaces, wrapping {{{
+ set expandtab
+ set tabstop=2
+ set softtabstop=2
+ set autoindent
+ set smartindent
+ set shiftwidth=2
+ set noexpandtab
+" }}}
