@@ -27,10 +27,18 @@ highlight clear SignColumn
 
 " Tabs, spaces, wrapping {{{
  set expandtab
- set tabstop=2
+" set tabstop=2
  set softtabstop=2
  set autoindent
  set smartindent
  set shiftwidth=2
- set noexpandtab
+" set noexpandtab
 " }}}
+
+" keep a backup file
+set nobackup
+
+set swapfile
+
+" where to put swap files
+set directory=~/dotvim/tmp/
