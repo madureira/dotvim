@@ -16,3 +16,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/find-complete"]
+	path = bundle/find-complete
+	url = https://github.com/stegtmeyer/find-complete.git
