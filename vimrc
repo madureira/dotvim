@@ -42,3 +42,5 @@ set swapfile
 
 " where to put swap files
 set directory=~/dotvim/tmp/
+
+set path=./**
