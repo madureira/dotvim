@@ -16,6 +16,3 @@
 [submodule "bundle/find-complete"]
 	path = bundle/find-complete
 	url = https://github.com/stegtmeyer/find-complete.git
-[submodule "bundle/python-mode"]
-	path = bundle/python-mode
-	url = git://github.com/klen/python-mode.git
