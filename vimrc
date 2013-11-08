@@ -8,9 +8,6 @@ syntax on
 " enable file type detection
 filetype plugin on
 
-" enable file type detection
-filetype indent on
-
 " enable mouse selection
 set mouse=a
 
