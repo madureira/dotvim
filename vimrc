@@ -23,12 +23,12 @@ highlight clear SignColumn
 
 
 " Tabs, spaces, wrapping {{{
- set expandtab
-" set tabstop=2
- set softtabstop=4
- set autoindent
- set smartindent
- set shiftwidth=4
+set expandtab
+set tabstop=2
+set softtabstop=4
+set autoindent
+set smartindent
+set shiftwidth=4
 " set noexpandtab
 " }}}
 
