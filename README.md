@@ -2,24 +2,30 @@
 
 A set of vim configurations.
 
-## Installing
+## Dependencies
+* Git
 
-Dependences:
+## Install
 
-1. Git
+```sh
+$ ./install.sh
+```
 
-Installing the packages
+## Add plugin
 
-    $ ./install.sh
-
+```sh
+$ git submodule add https://github.com/repo/some-plugin.git bundle/some-plugin
+$ source ~/.vimrc
+```
 
 ## Configuring
 
 Open the ~/.bashrc or ~/.profile and add this:
 
-    if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-        export TERM='xterm-256color'
-    else
-        export TERM='xterm-color'
-    fi
-
+```sh
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+  export TERM='xterm-256color'
+else
+  export TERM='xterm-color'
+fi
+```
