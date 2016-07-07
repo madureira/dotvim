@@ -58,8 +58,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 autocmd BufReadPost,BufNewFile *.test.js set filetype=jasmine.javascript syntax=jasmine
 
 " highlight ColorColumn ctermbg=0*
-highlight ColorColumn ctermbg=8
-set colorcolumn=81
+"highlight ColorColumn ctermbg=8
+"set colorcolumn=81
 
 " open NERDTree automatically when vim starts up if no files were specified
 autocmd StdinReadPre * let s:std_in=1
@@ -67,3 +67,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Map a specific key or shortcut to open NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+" Map a specific key or shortcut to open ConqueTermSplit
+map <C-b> :ConqueTermSplit bash<CR>
