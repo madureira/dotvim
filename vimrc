@@ -38,6 +38,7 @@ set nobackup
 set swapfile
 
 " where to put swap files
+set backupdir=~/dotvim/tmp/
 set directory=~/dotvim/tmp/
 
 set path=./**
@@ -48,6 +49,21 @@ let g:airline#extensions#tabline#enabled = 1
 set t_Co=256
 set laststatus=2
 let g:airline_powerline_fonts = 1
+
+
+let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 0
+let g:syntastic_javascript_checkers = ['eslint']
 
 autocmd BufReadPost,BufNewFile *.test.js set filetype=jasmine.javascript syntax=jasmine
+
+" highlight ColorColumn ctermbg=0*
+highlight ColorColumn ctermbg=8
+set colorcolumn=81
+
+" open NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Map a specific key or shortcut to open NERDTree
+map <C-n> :NERDTreeToggle<CR>

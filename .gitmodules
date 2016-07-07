@@ -46,3 +46,9 @@
 [submodule "bundle/vim-jasmine"]
 	path = bundle/vim-jasmine
 	url = https://github.com/glanotte/vim-jasmine.git
+[submodule "bundle/vim-es6"]
+	path = bundle/vim-es6
+	url = https://github.com/isRuslan/vim-es6.git
+[submodule "bundle/vim-json"]
+	path = bundle/vim-json
+	url = https://github.com/elzr/vim-json
