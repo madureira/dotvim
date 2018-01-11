@@ -55,3 +55,9 @@
 [submodule "bundle/Conque-Shell"]
 	path = bundle/Conque-Shell
 	url = https://github.com/jewes/Conque-Shell.git
+[submodule "bundle/mustache"]
+	path = bundle/mustache
+	url = git://github.com/mustache/vim-mode.git
+[submodule "bundle/YouCompleteMe.vim"]
+	path = bundle/YouCompleteMe.vim
+	url = https://github.com/Valloric/YouCompleteMe.git
