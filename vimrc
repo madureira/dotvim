@@ -20,6 +20,12 @@ filetype plugin on
 " enable mouse selection
 set mouse=a
 
+if has("mouse_sgr")
+  set ttymouse=sgr
+else
+  set ttymouse=xterm2
+end
+
 " line number
 set number
 
@@ -66,7 +72,6 @@ set path+=$PWD/**
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
-set t_Co=256
 set laststatus=2
 let g:airline_powerline_fonts = 1
 
@@ -133,3 +138,6 @@ let Tlist_File_Fold_Auto_Close = 1
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 
+
+set visualbell
+set t_vb=
