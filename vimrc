@@ -20,6 +20,7 @@ filetype plugin on
 " enable mouse selection
 set mouse=a
 
+" Allow mouse drag
 if has("mouse_sgr")
   set ttymouse=sgr
 else
@@ -88,7 +89,8 @@ autocmd BufReadPost,BufNewFile *.test.js set filetype=jasmine.javascript syntax=
 "highlight ColorColumn ctermbg=8
 "set colorcolumn=81
 
-
+" Paste copied text multiple times
+xnoremap p pgvy
 
 " ===== NERDTree ======
 
@@ -107,7 +109,6 @@ map <C-b> :ConqueTermSplit bash<CR>
 
 " allow quit via single keypress (Q)
 map Q :q!<CR>
-
 
 " =========== Go to file =============================
 nnoremap <F8> :vertical wincmd f<CR>
