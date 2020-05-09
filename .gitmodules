@@ -4,9 +4,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule "bundle/vim-coffee-script"]
-	path = bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
@@ -31,9 +28,6 @@
 [submodule "bundle/vim-less"]
 	path = bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
-[submodule "bundle/emmet-vim"]
-	path = bundle/emmet-vim
-	url = https://github.com/mattn/emmet-vim.git
 [submodule "bundle/typescript-vim"]
 	path = bundle/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
@@ -43,21 +37,12 @@
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
-[submodule "bundle/vim-jasmine"]
-	path = bundle/vim-jasmine
-	url = https://github.com/glanotte/vim-jasmine.git
 [submodule "bundle/vim-es6"]
 	path = bundle/vim-es6
 	url = https://github.com/isRuslan/vim-es6.git
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = https://github.com/elzr/vim-json
-[submodule "bundle/Conque-Shell"]
-	path = bundle/Conque-Shell
-	url = https://github.com/jewes/Conque-Shell.git
-[submodule "bundle/mustache"]
-	path = bundle/mustache
-	url = git://github.com/mustache/vim-mode.git
 [submodule "bundle/Turtles"]
 	path = bundle/Turtles
 	url = https://github.com/beigebrucewayne/Turtles.git

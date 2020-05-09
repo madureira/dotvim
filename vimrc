@@ -81,13 +81,9 @@ let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
-let g:mustache_abbreviations = 1
-
-autocmd BufReadPost,BufNewFile *.test.js set filetype=jasmine.javascript syntax=jasmine
-
 " highlight ColorColumn ctermbg=0*
 "highlight ColorColumn ctermbg=8
-"set colorcolumn=81
+set colorcolumn=81
 
 " Paste copied text multiple times
 xnoremap p pgvy
