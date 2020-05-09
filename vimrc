@@ -5,17 +5,16 @@ set encoding=utf-8
 " enable syntax highlighting
 syntax on
 
+" enable file type detection
+filetype plugin on
+
 " Remove this if is not color/turtles.vim
 set t_Co=256
 
-
 colorscheme turtles
 " colorscheme jellygrass
-" colorscheme dracula
 " colorscheme VisualStudioDark
 
-" enable file type detection
-filetype plugin on
 
 " enable mouse selection
 set mouse=a
@@ -47,7 +46,7 @@ set showbreak=↪
 "highlight clear SignColumn
 
 
-" Tabs, spaces, wrapping {{{
+" Tabs, spaces, wrapping
 set expandtab
 set tabstop=2
 set softtabstop=2
@@ -55,7 +54,6 @@ set autoindent
 set smartindent
 set shiftwidth=2
 " set noexpandtab
-" }}}
 
 " keep a backup file
 set nobackup
@@ -66,7 +64,6 @@ set swapfile
 set backupdir=~/dotvim/tmp/
 set directory=~/dotvim/tmp/
 
-
 " Set path to current dir
 set path+=$PWD/**
 
@@ -76,14 +73,14 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 let g:airline_powerline_fonts = 1
 
-
+" Javascript settings
 let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
 " highlight ColorColumn ctermbg=0*
-"highlight ColorColumn ctermbg=8
-set colorcolumn=81
+" highlight ColorColumn ctermbg=8
+" set colorcolumn=81
 
 " Paste copied text multiple times
 xnoremap p pgvy
@@ -118,7 +115,7 @@ map <C-m> :NERDTreeMirror<CR>
 map <C-b> :ConqueTermSplit bash<CR>
 
 " allow quit via single keypress (Q)
-map Q :q!<CR>
+map q :q!<CR>
 
 " =========== Go to file =============================
 nnoremap <F8> :vertical wincmd f<CR>
@@ -127,16 +124,15 @@ set splitbelow
 set splitright
 
 
-
-" Exibe nome da função
+" Show function name
 let g:ctags_statusline=1
-" Inicializar script automaticamente
+" Start script automatically
 let generate_tags=1
-" Exibe os resultados em uma janela vertical
+" Show the result in a vertical window
 let Tlist_Use_Horiz_Window=0
-" Atalho para exibição da Taglist
+" Shortcut to open the Taglist
 map TT :TlistToggle<CR>
-" Configurações para exibição da Taglist
+" Taglist display settings
 let Tlist_Use_Right_Window = 1
 let Tlist_Compact_Format = 1
 let Tlist_Exit_OnlyWindow = 1
@@ -144,11 +140,11 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_File_Fold_Auto_Close = 1
 
 
-
 " =============== TABS ====================
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 
-
+" Disable terminal bell song
 set visualbell
 set t_vb=
+
