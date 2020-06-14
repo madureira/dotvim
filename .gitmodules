@@ -46,3 +46,6 @@
 [submodule "bundle/Turtles"]
 	path = bundle/Turtles
 	url = https://github.com/beigebrucewayne/Turtles.git
+[submodule "bundle/editorconfig-vim"]
+	path = bundle/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git

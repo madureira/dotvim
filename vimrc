@@ -31,6 +31,7 @@ set number
 
 " show a visual line under the cursor's current line
 set cursorline
+" set cursorcolumn
 
 " show the matching part of the pair for [] {} and ()
 set showmatch
@@ -48,8 +49,8 @@ set showbreak=↪
 
 " Tabs, spaces, wrapping
 set expandtab
-set tabstop=2
-set softtabstop=2
+" set tabstop=2
+" set softtabstop=2
 set autoindent
 set smartindent
 set shiftwidth=2
@@ -100,6 +101,10 @@ else
 endif
 
 " ===== NERDTree ======
+"
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 " open NERDTree automatically when vim starts up if no files were specified
 autocmd StdinReadPre * let s:std_in=1
@@ -148,3 +153,5 @@ nnoremap <C-Right> :tabnext<CR>
 set visualbell
 set t_vb=
 
+" EditorConfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
