@@ -53,7 +53,7 @@ set expandtab
 " set softtabstop=2
 set autoindent
 set smartindent
-set shiftwidth=2
+set shiftwidth=4
 " set noexpandtab
 
 " keep a backup file
@@ -68,6 +68,14 @@ set directory=~/dotvim/tmp/
 " Set path to current dir
 set path+=$PWD/**
 
+" Reload current buffer automatically
+set autoread
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
+  \ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
+
+" Notification after file change
+autocmd FileChangedShellPost *
+  \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
@@ -127,7 +135,6 @@ nnoremap <F8> :vertical wincmd f<CR>
 
 set splitbelow
 set splitright
-
 
 " Show function name
 let g:ctags_statusline=1
