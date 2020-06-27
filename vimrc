@@ -39,6 +39,8 @@ set showmatch
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
 
+let g:cpp_class_decl_highlight = 1
+
 set list listchars=tab:▸\ ,trail:·,eol:¬,extends:❯,precedes:❮
 
 set showbreak=↪
