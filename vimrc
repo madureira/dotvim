@@ -44,6 +44,8 @@ set list listchars=tab:▸\ ,trail:·,eol:¬,extends:❯,precedes:❮
 
 set showbreak=↪
 
+" enable gitgutter
+let g:gitgutter_enabled = 0
 " enable the same appearance as line number column to gitgutter
 "highlight clear SignColumn
 
@@ -83,6 +85,9 @@ let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
+" Airline Tab navigation.
+nnoremap <S-TAB> :bprevious<CR>
+nnoremap <TAB>   :bnext<CR>
 
 " Javascript settings
 let g:javascript_plugin_jsdoc = 1
