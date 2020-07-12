@@ -15,7 +15,6 @@ colorscheme turtles
 " colorscheme jellygrass
 " colorscheme VisualStudioDark
 
-
 " enable mouse selection
 set mouse=a
 
@@ -83,6 +82,7 @@ autocmd FileChangedShellPost *
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
 
 " Javascript settings
 let g:javascript_plugin_jsdoc = 1
