@@ -158,6 +158,11 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_File_Fold_Auto_Close = 1
 
+set autochdir
+set tags+=./Morpheus/tags;
+nnoremap <silent> <c-w>] :vert winc ]<cr>
+nnoremap gf :vertical wincmd f<CR>
+
 
 " =============== TABS ====================
 nnoremap <C-Left> :tabprevious<CR>
@@ -169,3 +174,14 @@ set t_vb=
 
 " EditorConfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+let g:ycm_semantic_triggers =  {
+  \   'c,cpp,objc': [ 're!\w{3}', '_' ],
+  \ }
+
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+set runtimepath+=~/.vim/bundle/YouCompleteMe/
+
+" set the backspace to delete normally
+set backspace=indent,eol,start
