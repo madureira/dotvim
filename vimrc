@@ -180,8 +180,70 @@ let g:ycm_semantic_triggers =  {
   \ }
 
 
+let g:loaded_youcompleteme = 0
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 set runtimepath+=~/.vim/bundle/YouCompleteMe/
 
 " set the backspace to delete normally
 set backspace=indent,eol,start
+
+" map to Format file
+map FF :ClangFormat<CR>
+
+" https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -4,
+            \ "Standard" : "C++11",
+            \ "AlignAfterOpenBracket" : "Align",
+            \ "AlignTrailingComments" : "false",
+            \ "AllowAllArgumentsOnNextLine" : "false",
+            \ "AllowAllParametersOfDeclarationOnNextLine" : "false",
+            \ "AllowShortBlocksOnASingleLine" : "Never",
+            \ "AllowShortCaseLabelsOnASingleLine": "false",
+            \ "AllowShortFunctionsOnASingleLine" : "None",
+            \ "AllowShortIfStatementsOnASingleLine" : "Never",
+            \ "AllowShortLambdasOnASingleLine" : "None",
+            \ "AllowShortLoopsOnASingleLine" : "false",
+            \ "AlwaysBreakAfterReturnType" : "None",
+            \ "AlwaysBreakBeforeMultilineStrings" : "false",
+            \ "AlwaysBreakTemplateDeclarations" : "Yes",
+            \ "BinPackArguments" : "true",
+            \ "BinPackParameters" : "true",
+            \ "BreakBeforeBraces" : "Allman",
+            \ "BreakBeforeTernaryOperators" : "true",
+            \ "BreakConstructorInitializers" : "BeforeComma",
+            \ "BreakStringLiterals" : "false",
+            \ "ColumnLimit" : 120,
+            \ "CompactNamespaces" : "true",
+            \ "Cpp11BracedListStyle" : "false",
+            \ "FixNamespaceComments" : "true",
+            \ "IndentCaseBlocks" : "false",
+            \ "IndentCaseLabels" : "true",
+            \ "IndentPPDirectives" : "None",
+            \ "IndentWidth" : 4,
+            \ "KeepEmptyLinesAtTheStartOfBlocks" : "false",
+            \ "Language" : "Cpp",
+            \ "MaxEmptyLinesToKeep" : 1,
+            \ "NamespaceIndentation" : "All",
+            \ "PointerAlignment" : "Left",
+            \ "ReflowComments" : "true",
+            \ "SortUsingDeclarations" : "false",
+            \ "SpaceAfterCStyleCast" : "false",
+            \ "SpaceAfterLogicalNot" : "false",
+            \ "SpaceAfterTemplateKeyword" : "false",
+            \ "SpaceBeforeAssignmentOperators" : "true",
+            \ "SpaceBeforeCpp11BracedList" : "true",
+            \ "SpaceBeforeCtorInitializerColon" : "true",
+            \ "SpaceBeforeInheritanceColon" : "true",
+            \ "SpaceBeforeParens" : "ControlStatements",
+            \ "SpaceBeforeRangeBasedForLoopColon" : "true",
+            \ "SpaceBeforeSquareBrackets" : "false",
+            \ "SpaceInEmptyBlock" : "false",
+            \ "SpaceInEmptyParentheses" : "false",
+            \ "SpacesBeforeTrailingComments" : 1,
+            \ "SpacesInCStyleCastParentheses" : "false",
+            \ "SpacesInConditionalStatement" : "false",
+            \ "SpacesInContainerLiterals" : "false",
+            \ "SpacesInParentheses" : "false",
+            \ "SpacesInSquareBrackets" : "false",
+            \ "TabWidth" : 4}
