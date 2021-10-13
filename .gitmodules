@@ -46,3 +46,12 @@
 [submodule "bundle/vim-smoothie"]
 	path = bundle/vim-smoothie
 	url = git@github.com:psliwka/vim-smoothie.git
+[submodule "bundle/vim-clang-format"]
+	path = bundle/vim-clang-format
+	url = git@github.com:rhysd/vim-clang-format.git
+[submodule "bundle/vim-operator-user"]
+	path = bundle/vim-operator-user
+	url = git@github.com:kana/vim-operator-user.git
+[submodule "bundle/vimproc.vim"]
+	path = bundle/vimproc.vim
+	url = git@github.com:Shougo/vimproc.vim.git
