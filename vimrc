@@ -191,6 +191,7 @@ set backspace=indent,eol,start
 map FF :ClangFormat<CR>
 
 " https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+let g:clang_format#auto_format = 1
 let g:clang_format#style_options = {
             \ "AccessModifierOffset" : -4,
             \ "Standard" : "C++11",
@@ -228,6 +229,7 @@ let g:clang_format#style_options = {
             \ "PointerAlignment" : "Left",
             \ "ReflowComments" : "true",
             \ "SortUsingDeclarations" : "false",
+            \ "SortIncludes" : "false",
             \ "SpaceAfterCStyleCast" : "false",
             \ "SpaceAfterLogicalNot" : "false",
             \ "SpaceAfterTemplateKeyword" : "false",
