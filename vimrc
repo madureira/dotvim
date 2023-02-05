@@ -135,7 +135,9 @@ map <C-m> :NERDTreeMirror<CR>
 map <C-b> :ConqueTermSplit bash<CR>
 
 " allow quit via single keypress (Q)
-map q :q!<CR>
+" map q :q!<CR>
+
+noremap q :enew<bar>bd #<bar>:q!<CR>
 
 " =========== Go to file =============================
 nnoremap <F8> :vertical wincmd f<CR>
