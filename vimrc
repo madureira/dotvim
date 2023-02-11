@@ -2,6 +2,8 @@ call pathogen#infect()
 
 set encoding=utf-8
 
+hi clear
+
 " enable syntax highlighting
 syntax on
 
@@ -10,10 +12,20 @@ filetype plugin on
 
 " Remove this if is not color/turtles.vim
 set t_Co=256
+"set term=xterm-256color
 
-colorscheme turtles
-" colorscheme jellygrass
-" colorscheme VisualStudioDark
+"colorscheme turtles
+"colorscheme jellygrass
+colorscheme jellybeans
+"colorscheme VisualStudioDark
+
+let g:jellybeans_overrides = {
+\    'background': { 'guibg': '080808' },
+\}
+
+"set background=dark
+"hi Normal ctermbg=232 guifg=#151515
+"hi LineNr ctermbg=232 guifg=#151515
 
 " enable mouse selection
 set mouse=a
@@ -43,6 +55,9 @@ let g:cpp_class_decl_highlight = 1
 set list listchars=tab:▸\ ,trail:·,eol:¬,extends:❯,precedes:❮
 
 set showbreak=↪
+
+" hide hidden chars
+set nolist
 
 " enable gitgutter
 let g:gitgutter_enabled = 0
