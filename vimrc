@@ -7,6 +7,8 @@ hi clear
 " enable syntax highlighting
 syntax on
 
+filetype plugin indent on
+
 " enable file type detection
 filetype plugin on
 
@@ -191,6 +193,10 @@ set t_vb=
 
 " EditorConfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" Rust
+let g:rustfmt_autosave = 1
+
 
 let g:ycm_semantic_triggers =  {
   \   'c,cpp,objc': [ 're!\w{3}', '_' ],
