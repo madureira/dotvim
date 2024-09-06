@@ -1,29 +1,31 @@
 call pathogen#infect()
 
-set encoding=utf-8
+set encoding=UTF-8
 
 hi clear
 
 " enable syntax highlighting
 syntax on
 
+" enable file type detection
 filetype plugin indent on
 
-" enable file type detection
-filetype plugin on
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 
 " Remove this if is not color/turtles.vim
-set t_Co=256
+"set t_Co=256
 "set term=xterm-256color
+
+"let g:jellybeans_overrides = {
+"\    'background': { 'guibg': '080808' },
+"\}
 
 "colorscheme turtles
 "colorscheme jellygrass
 colorscheme jellybeans
 "colorscheme VisualStudioDark
-
-let g:jellybeans_overrides = {
-\    'background': { 'guibg': '080808' },
-\}
 
 "set background=dark
 "hi Normal ctermbg=232 guifg=#151515
@@ -51,8 +53,6 @@ set showmatch
 
 " enable all Python syntax highlighting features
 let python_highlight_all = 1
-
-let g:cpp_class_decl_highlight = 1
 
 set list listchars=tab:▸\ ,trail:·,eol:¬,extends:❯,precedes:❮
 
@@ -101,7 +101,6 @@ autocmd FileChangedShellPost *
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
 " Airline Tab navigation.
 nnoremap <S-TAB> :bprevious<CR>
 nnoremap <TAB>   :bnext<CR>
@@ -162,10 +161,6 @@ nnoremap <F8> :vertical wincmd f<CR>
 set splitbelow
 set splitright
 
-" Show function name
-let g:ctags_statusline=1
-" Start script automatically
-let generate_tags=1
 " Show the result in a vertical window
 let Tlist_Use_Horiz_Window=0
 " Shortcut to open the Taglist
@@ -173,12 +168,11 @@ map TT :TlistToggle<CR>
 " Taglist display settings
 let Tlist_Use_Right_Window = 1
 let Tlist_Compact_Format = 1
+
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_File_Fold_Auto_Close = 1
 
-set autochdir
-set tags+=./Morpheus/tags;
 nnoremap <silent> <c-w>] :vert winc ]<cr>
 nnoremap gf :vertical wincmd f<CR>
 
@@ -197,78 +191,5 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " Rust
 let g:rustfmt_autosave = 1
 
-
-let g:ycm_semantic_triggers =  {
-  \   'c,cpp,objc': [ 're!\w{3}', '_' ],
-  \ }
-
-
-let g:loaded_youcompleteme = 0
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-set runtimepath+=~/.vim/bundle/YouCompleteMe/
-
 " set the backspace to delete normally
 set backspace=indent,eol,start
-
-" map to Format file
-map FF :ClangFormat<CR>
-
-" https://clang.llvm.org/docs/ClangFormatStyleOptions.html
-let g:clang_format#auto_format = 1
-let g:clang_format#style_options = {
-            \ "AccessModifierOffset" : -4,
-            \ "Standard" : "C++11",
-            \ "AlignAfterOpenBracket" : "Align",
-            \ "AlignTrailingComments" : "false",
-            \ "AllowAllArgumentsOnNextLine" : "false",
-            \ "AllowAllParametersOfDeclarationOnNextLine" : "false",
-            \ "AllowShortBlocksOnASingleLine" : "Never",
-            \ "AllowShortCaseLabelsOnASingleLine": "false",
-            \ "AllowShortFunctionsOnASingleLine" : "None",
-            \ "AllowShortIfStatementsOnASingleLine" : "Never",
-            \ "AllowShortLambdasOnASingleLine" : "None",
-            \ "AllowShortLoopsOnASingleLine" : "false",
-            \ "AlwaysBreakAfterReturnType" : "None",
-            \ "AlwaysBreakBeforeMultilineStrings" : "false",
-            \ "AlwaysBreakTemplateDeclarations" : "Yes",
-            \ "BinPackArguments" : "true",
-            \ "BinPackParameters" : "true",
-            \ "BreakBeforeBraces" : "Allman",
-            \ "BreakBeforeTernaryOperators" : "true",
-            \ "BreakConstructorInitializers" : "BeforeComma",
-            \ "BreakStringLiterals" : "false",
-            \ "ColumnLimit" : 120,
-            \ "CompactNamespaces" : "true",
-            \ "Cpp11BracedListStyle" : "false",
-            \ "FixNamespaceComments" : "true",
-            \ "IndentCaseBlocks" : "false",
-            \ "IndentCaseLabels" : "true",
-            \ "IndentPPDirectives" : "None",
-            \ "IndentWidth" : 4,
-            \ "KeepEmptyLinesAtTheStartOfBlocks" : "false",
-            \ "Language" : "Cpp",
-            \ "MaxEmptyLinesToKeep" : 1,
-            \ "NamespaceIndentation" : "All",
-            \ "PointerAlignment" : "Left",
-            \ "ReflowComments" : "true",
-            \ "SortUsingDeclarations" : "false",
-            \ "SortIncludes" : "false",
-            \ "SpaceAfterCStyleCast" : "false",
-            \ "SpaceAfterLogicalNot" : "false",
-            \ "SpaceAfterTemplateKeyword" : "false",
-            \ "SpaceBeforeAssignmentOperators" : "true",
-            \ "SpaceBeforeCpp11BracedList" : "true",
-            \ "SpaceBeforeCtorInitializerColon" : "true",
-            \ "SpaceBeforeInheritanceColon" : "true",
-            \ "SpaceBeforeParens" : "ControlStatements",
-            \ "SpaceBeforeRangeBasedForLoopColon" : "true",
-            \ "SpaceBeforeSquareBrackets" : "false",
-            \ "SpaceInEmptyBlock" : "false",
-            \ "SpaceInEmptyParentheses" : "false",
-            \ "SpacesBeforeTrailingComments" : 1,
-            \ "SpacesInCStyleCastParentheses" : "false",
-            \ "SpacesInConditionalStatement" : "false",
-            \ "SpacesInContainerLiterals" : "false",
-            \ "SpacesInParentheses" : "false",
-            \ "SpacesInSquareBrackets" : "false",
-            \ "TabWidth" : 4}
