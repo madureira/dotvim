@@ -9,3 +9,7 @@ git submodule update
 cd ~ && git clone https://github.com/powerline/fonts.git
 cd fonts && ./install.sh
 rm -rf ~/fonts
+
+# Alacritty config
+mkdir -p ~/.config/alacritty
+cp ~/dotvim/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml

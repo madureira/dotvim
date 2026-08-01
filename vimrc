@@ -10,7 +10,7 @@ syntax on
 " enable file type detection
 filetype plugin indent on
 
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+set guifont=Terminess\ Nerd\ Font\ Mono:h13
 
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 
@@ -24,8 +24,9 @@ let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 
 "colorscheme turtles
 "colorscheme jellygrass
-colorscheme jellybeans
+"colorscheme jellybeans
 "colorscheme VisualStudioDark
+colorscheme vga
 
 "set background=dark
 "hi Normal ctermbg=232 guifg=#151515
@@ -118,15 +119,18 @@ let g:syntastic_javascript_checkers = ['eslint']
 xnoremap p pgvy
 
 
-" Make cursor blink(pulse)
+" Cursor style — Turbo Vision / DOS era
+" Normal: blinking block (█)  Insert: blinking underline (_)  Replace: steady block
 if &term == 'win32'
   let &t_ti.=" \e[1 q"
-  let &t_SI.=" \e[5 q-- INSERT --"
+  let &t_SI.=" \e[3 q"
+  let &t_SR.=" \e[2 q"
   let &t_EI.=" \e[1 q"
   let &t_te.=" \e[0 q"
 else
   let &t_ti.="\e[1 q"
-  let &t_SI.="\e[5 q"
+  let &t_SI.="\e[3 q\a"
+  let &t_SR.="\e[2 q"
   let &t_EI.="\e[1 q"
   let &t_te.="\e[0 q"
 endif
@@ -193,3 +197,41 @@ let g:rustfmt_autosave = 1
 
 " set the backspace to delete normally
 set backspace=indent,eol,start
+
+" ===== LSP (vim-lsp + clangd) =====
+" Instale o clangd com :LspInstallServer dentro de um arquivo .c ou .cpp
+
+function! s:on_lsp_buffer_enabled() abort
+  setlocal omnifunc=lsp#complete
+  setlocal signcolumn=yes
+  nmap <buffer> gd <plug>(lsp-definition)
+  nmap <buffer> gr <plug>(lsp-references)
+  nmap <buffer> gi <plug>(lsp-implementation)
+  nmap <buffer> K  <plug>(lsp-hover)
+  nmap <buffer> <leader>rn <plug>(lsp-rename)
+  nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+  nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+endfunction
+
+augroup lsp_install
+  au!
+  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
+" Semantic highlighting — habilita cores por tipo semântico (parâmetros, variáveis, tipos)
+let g:lsp_semantic_enabled = 1
+
+" Diagnósticos inline
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_virtual_text_enabled = 0
+
+" Desabilita signs no gutter para não poluir a estética
+let g:lsp_diagnostics_signs_enabled = 0
+
+" Asyncomplete
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_auto_completeopt = 1
+
+" Fecha o preview após completar
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif

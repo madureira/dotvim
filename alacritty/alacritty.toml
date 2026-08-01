@@ -1,0 +1,52 @@
+[env]
+TERM = "xterm-256color"
+
+[window]
+decorations = "full"
+opacity = 1.0
+dynamic_title = true
+
+[font]
+size = 18.0
+
+[font.normal]
+#family = "Liberation Mono for Powerline"
+#family = "Perfect DOS VGA 437 Win"
+family = "Terminess Nerd Font Mono"
+style = "Regular"
+
+[cursor]
+blink_interval = 100
+blink_timeout = 0
+
+[cursor.style]
+shape = "Block"
+blinking = "Always"
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+mouse = "Middle"
+action = "PasteSelection"
+
+[selection]
+save_to_clipboard = true
+
+[colors.primary]
+foreground = "#d0d0d0"
+
+[colors.bright]
+black   = "#808080"
+red     = "#ff6c6b"
+green   = "#98be65"
+yellow  = "#ecbe7b"
+blue    = "#51afef"
+magenta = "#c678dd"
+cyan    = "#46d9ff"
+white   = "#ffffff"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"

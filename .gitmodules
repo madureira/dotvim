@@ -46,3 +46,15 @@
 [submodule "bundle/vim-devicons"]
 	path = bundle/vim-devicons
 	url = git@github.com:ryanoasis/vim-devicons.git
+[submodule "bundle/vim-lsp"]
+	path = bundle/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule "bundle/vim-lsp-settings"]
+	path = bundle/vim-lsp-settings
+	url = https://github.com/mattn/vim-lsp-settings.git
+[submodule "bundle/asyncomplete.vim"]
+	path = bundle/asyncomplete.vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim.git
+[submodule "bundle/asyncomplete-lsp.vim"]
+	path = bundle/asyncomplete-lsp.vim
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
